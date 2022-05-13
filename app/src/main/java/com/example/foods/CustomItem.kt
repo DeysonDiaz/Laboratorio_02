@@ -23,25 +23,30 @@ fun CustomItem(region: Region, navegarPantalla: (List<String>) -> Unit) {
             .fillMaxWidth()
             .padding(24.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         Text(
             text = "${region.id}",
+            Modifier.width(50.dp),
             color = Color.Black,
             fontSize = Typography.h4.fontSize,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
         )
         Text(
             text = region.name,
+            Modifier.width(180.dp),
             color = Color.Black,
             fontSize = Typography.h5.fontSize,
-            fontWeight = FontWeight.Normal
+            fontWeight = FontWeight.Normal,
         )
-        Button(onClick = { navegarPantalla(region.foods) }) {
-            Text(
-                text = region.name
-            )
+        Button( onClick = { navegarPantalla(region.foods) },
+            ) {
+            Text(text = "Ver")
         }
+
+
+
+
+
 
     }
 }

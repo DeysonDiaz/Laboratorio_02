@@ -1,5 +1,6 @@
 package com.example.foods
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -19,6 +20,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.foods.ui.theme.Typography
 
 fun convert(text: String):List<String>{
     val text = text.toString().replace("[", "").replace("]", "");
@@ -38,10 +40,27 @@ fun Pantalla2(
         verticalArrangement = Arrangement.SpaceAround,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        LazyColumn(){
+        LazyColumn(
+            contentPadding = PaddingValues(all = 12.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ){
             items(listFoods) {
-                Row() {
-                    Text(text = it)
+                Row(
+                    modifier = Modifier
+                        .background(Color.LightGray)
+                        .fillMaxWidth()
+                        .padding(24.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+
+                ) {
+                    Text(
+                        text = it,
+                        color = Color.Black,
+                        fontSize = Typography.h5.fontSize,
+                        fontWeight = FontWeight.Normal
+                    )
+
                 }
             }
         }

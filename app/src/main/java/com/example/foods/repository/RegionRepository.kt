@@ -8,7 +8,7 @@ class RegionRepository {
             Region(
                 id = 1,
                 name = "Amazonas",
-                foods = listOf("Rocoto Relleno","Arroz","Papa")
+                foods = listOf("Tacacho con cecina","Juane","Ceviche Dorado")
             ),
             Region(
                 id = 2,
@@ -23,12 +23,12 @@ class RegionRepository {
             Region(
                 id = 4,
                 name = "Lima",
-                foods = listOf("Pastel de papa","Chicha al pollo","Chelas")
+                foods = listOf("Pastel de papa","Pollo","Locro")
             ),
             Region(
                 id = 5,
                 name = "Arequipa",
-                foods = listOf("Aguadito","Chaufa","Adobo")
+                foods = listOf("Adobo ","Rocoto Relleno","Soltero")
             ),
             Region(
                 id = 6,
@@ -38,12 +38,12 @@ class RegionRepository {
             Region(
                 id = 7,
                 name = "Ayacucho",
-                foods = listOf("Rocoto Relleno","Arroz","Papa")
+                foods = listOf("Rocoto Relleno","Arroz con Pato","")
             ),
             Region(
                 id = 8,
                 name = "Madre de Dios",
-                foods = listOf("Rocoto Relleno","Arroz","Papa")
+                foods = listOf("Ceviche","Arroz","Papa")
             ),
             Region(
                 id = 9,
@@ -83,7 +83,7 @@ class RegionRepository {
             Region(
                 id = 16,
                 name = "Puno",
-                foods = listOf("Rocoto Relleno","Arroz","Papa")
+                foods = listOf("Trucha frita","Cancacho","Chairo")
             ),
             Region(
                 id = 17,
@@ -118,7 +118,7 @@ class RegionRepository {
             Region(
                 id = 23,
                 name = "La Libertad",
-                foods = listOf("Rocoto Relleno","Arroz","Papa")
+                foods = listOf("Seco de cabrito","Arroz con pato","Ceviche de Conchas")
             ),
             Region(
                 id = 24,
