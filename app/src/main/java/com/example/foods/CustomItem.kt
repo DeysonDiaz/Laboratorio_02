@@ -16,7 +16,7 @@ import com.example.foods.ui.theme.Typography
 
 
 @Composable
-fun CustomItem(region: Region, navegarPantalla:(String)-> Unit ) {
+fun CustomItem(region: Region, navegarPantalla: (List<String>) -> Unit) {
     Row(
         modifier = Modifier
             .background(Color.LightGray)
@@ -37,7 +37,7 @@ fun CustomItem(region: Region, navegarPantalla:(String)-> Unit ) {
             fontSize = Typography.h5.fontSize,
             fontWeight = FontWeight.Normal
         )
-        Button(onClick = { navegarPantalla(region.name) }) {
+        Button(onClick = { navegarPantalla(region.foods) }) {
             Text(
                 text = region.name
             )
