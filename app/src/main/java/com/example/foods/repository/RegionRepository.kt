@@ -13,27 +13,27 @@ class RegionRepository {
             Region(
                 id = 2,
                 name = "Lambayeque",
-                foods = listOf("Rocoto Relleno","Arroz","Papa")
+                foods = listOf("Aji de Gallina","Poroto","Lenteja")
             ),
             Region(
                 id = 3,
                 name = "Ancash",
-                foods = listOf("Rocoto Relleno","Arroz","Papa")
+                foods = listOf("Calabaza","Caldo","La papita del choco")
             ),
             Region(
                 id = 4,
                 name = "Lima",
-                foods = listOf("Rocoto Relleno","Arroz","Papa")
+                foods = listOf("Pastel de papa","Chicha al pollo","Chelas")
             ),
             Region(
                 id = 5,
                 name = "Arequipa",
-                foods = listOf("Rocoto Relleno","Arroz","Papa")
+                foods = listOf("Aguadito","Chaufa","Adobo")
             ),
             Region(
                 id = 6,
                 name = "Loreto",
-                foods = listOf("Rocoto Relleno","Arroz","Papa")
+                foods = listOf("Cevichano","Arroz con pato","Matasquita")
             ),
             Region(
                 id = 7,

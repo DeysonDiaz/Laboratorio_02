@@ -1,9 +1,9 @@
 package com.example.foods
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
@@ -20,9 +20,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+fun convert(text: String):List<String>{
+
+    val list: List<String> = text.split(",").toList()
+    return list
+}
 @Composable
 fun Pantalla2(
-    text:String
+    text: String,
+    listFoods: List<String> = convert(text),
 ) {
 
     Column(
@@ -32,10 +38,13 @@ fun Pantalla2(
         verticalArrangement = Arrangement.SpaceAround,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(
-            text = text,
-            style = TextStyle(color = Color.Black, fontSize = 42.sp, fontWeight = FontWeight.Black)
-        )
+        LazyColumn(){
+            items(listFoods) {
+                Row() {
+                    Text(text = it)
+                }
+            }
+        }
 
     }
 }
