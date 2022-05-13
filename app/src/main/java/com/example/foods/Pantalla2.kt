@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 fun convert(text: String):List<String>{
-
+    val text = text.toString().replace("[", "").replace("]", "");
     val list: List<String> = text.split(",").toList()
     return list
 }
