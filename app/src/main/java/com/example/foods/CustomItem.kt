@@ -2,6 +2,7 @@ package com.example.foods
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -15,7 +16,7 @@ import com.example.foods.ui.theme.Typography
 
 
 @Composable
-fun CustomItem(region: Region) {
+fun CustomItem(region: Region, navegarPantalla:(String)-> Unit ) {
     Row(
         modifier = Modifier
             .background(Color.LightGray)
@@ -36,17 +37,27 @@ fun CustomItem(region: Region) {
             fontSize = Typography.h5.fontSize,
             fontWeight = FontWeight.Normal
         )
+        Button(onClick = { navegarPantalla(region.name) }) {
+            Text(
+                text = region.name
+            )
+        }
+
     }
 }
 
-
+/*
 @Composable
 @Preview
-fun CustomItemPreview() {
+fun CustomItemPreview(
+) {
+    val navegarPantalla: (String) -> Unit
+
     CustomItem(
         region = Region(
             id = 1,
             name = "Arequipa",
-        )
+        ),
+        navegarPantalla
     )
-}
+}*/

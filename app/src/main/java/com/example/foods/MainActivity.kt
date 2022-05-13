@@ -25,20 +25,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            FoodsTheme {
-                val regionRepository = RegionRepository()
-                val getAllData = regionRepository.getAllData()
 
-                LazyColumn(
-                    contentPadding = PaddingValues(all = 12.dp),
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
-                ){
-                    itemsIndexed(items = getAllData){ index, region ->
-                        Log.d("MainActivity", index.toString())
-                        CustomItem(region = region)
-                    }
-                }
-            }
+            NavigationHost()
         }
     }
 }
